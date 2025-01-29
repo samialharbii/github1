@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static ObjectsPath.GitHubPaths.*;
+import static ObjectsPath.LoginPaths.*;
 
 public class LoginPages {
     WebDriver driver = null;
@@ -19,6 +20,24 @@ public class LoginPages {
 
     public void openGitUrl() {
         driver.get("https://github.com/");
+    }
+    public void clickOnSignInBtn() {
+        WebElement signInBtn=driver.findElement(signIn);
+        signInBtn.click();
+    }
+    public void fillEmail(){
+        WebElement Email = driver.findElement(email);
+        Email.sendKeys("sami12474@hotmail.com");
+    }
+
+    public void fillPassword(){
+        WebElement Email = driver.findElement(password);
+        Email.sendKeys("123");
+    }
+
+    public void ClickOnLogin(){
+        WebElement login = driver.findElement(signInBtn);
+        login.click();
     }
 /*
     public void clickOnSignInBtn() {
@@ -37,10 +56,11 @@ public class LoginPages {
     }
 
  */
+    /*
     public void clickOnparivce() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement signInBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(parivce));
         wait.until(ExpectedConditions.elementToBeClickable(signInBtn));
         signInBtn.click();
-    }
+    }*/
 }
