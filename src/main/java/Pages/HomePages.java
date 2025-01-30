@@ -3,7 +3,6 @@ package Pages;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import static ObjectsPath.HomePaths.*;
 
 public class HomePages {
@@ -20,7 +19,7 @@ public class HomePages {
 
     public void fillRepoName(){
         WebElement RepoName = driver.findElement(repName);
-        RepoName.sendKeys("automation");
+        RepoName.sendKeys("automation2");
     }
 
     public void clickOnCreateRepo(){
@@ -34,3 +33,10 @@ public class HomePages {
         //Using JavaScript for Scrolling via Selenium
     }
 }
+/*
+    public void scrollToPosition(int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(arguments[0], arguments[1]);", x, y);
+        //Using JavaScript for Scrolling via Selenium
+    }
+}*/

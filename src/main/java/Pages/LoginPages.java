@@ -2,53 +2,41 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 import static ObjectsPath.GitHubPaths.*;
-import static ObjectsPath.GitHubPaths.signIn;
 import static ObjectsPath.LoginPaths.*;
+
 
 public class LoginPages {
     WebDriver driver = null;
 
-    public LoginPages(WebDriver driver) {
+    public LoginPages (WebDriver driver){
         this.driver = driver;
 
-
     }
 
-    public void openGitUrl() {
+    public void openGitUrl(){
         driver.get("https://github.com/");
     }
-    public void clickOnSignInBtn(){
 
+    public void clickOnSignInBtn(){
         WebElement SignInBtn = driver.findElement(signIn);
         SignInBtn.click();
-
     }
 
-
-
-
-    public void clickOnSignUpBtn() {
-        WebElement SignUpBtn = driver.findElement(signUp);
-        SignUpBtn.click();
-    }
-    public void clickOnTermsBtn(){
-        WebElement TermsBtn = driver.findElement(termsOfService);
-        TermsBtn.click();
+    public void fillEmail(){
+        WebElement Email = driver.findElement(email);
+        Email.sendKeys("sami12474@hotmail.com");
     }
 
-    public void githubPrivacy(){
-        WebElement PrivacyBtn = driver.findElement(githubPrivacy);
-        PrivacyBtn.click();
+    public void fillPassword(){
+        WebElement Email = driver.findElement(password);
+        Email.sendKeys("");
     }
 
-    public void githubStat(){
-        WebElement StatBtn = driver.findElement(githubStat);
-        StatBtn.click();
+    public void ClickOnLogin(){
+        WebElement login = driver.findElement(signInBtn);
+        login.click();
     }
 
 
