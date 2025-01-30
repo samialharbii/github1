@@ -31,7 +31,7 @@ public class LoginPages {
 
     public void fillPassword(){
         WebElement Email = driver.findElement(password);
-        Email.sendKeys("");
+        Email.sendKeys("enter");
     }
 
     public void ClickOnLogin(){
